@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dictionary EnglishName="English" CultureName="English" Culture="en-US">
+	<Value Id="NotEnoughMemory" Message="There is not enouth memory." />
+	<Value Id="remove" Content="Remove" Header="Remove" />
+	<Value Id="edit" Header="Edit" Content="Edit" />
+	<Value Id="save" Content="Save" />
+	<Value Id="cancel" Content="Cancel" />
+	<Value Id="add" Content="Add" ToolTip="Add" />
+	<Value Id="close" Content="Close" />
+	<Value Id="start" Text="Start" />
+	<Value Id="abort" Text="Abort" />
+	<Value Id="goToNextLevel" Header="Go to next level" />
+	<Value Id="continue" Header="Continue" />
+	<Value Id="delete" Header="Delete" Content="Delete" />
+	<Value Id="cover" Header="Cover" />
+	<Value Id="viewFull" Header="View full" />
+	<Value Id="copyFile" Header="Copy file" />
+	<Value Id="change" Header="Change" />
+	<Value Id="status" Header="Status" />
+	<Value Id="perso" Header="Perso..." />
+	<Value Id="operations" Header="Operations" />
+	<Value Id="linkedFile" Header="Linked file" />
+	<Value Id="link" Header="Link" Content="Link" />
+	<Value Id="copy" Header="Copy" Content="Copy" />
+	<Value Id="move" Header="Move" Content="Move" />
+	<Value Id="relocate" Header="Relocate" />
+	<Value Id="relocateEpisodes" Header="Relocate episodes" />
+	<Value Id="openFolder" Header="Open folder" />
+	<Value Id="markAs" Header="Mark as" />
+	<Value Id="markAsWatched" Header="Mark as watched" />
+	<Value Id="watched" Header="Watched" Content="Watched"/>
+	<Value Id="saveAndClose" Content="Save &amp; close" />
+	<Value Id="conserveBackupQuery" Content="Backup the database before executing the query" />
+	<Value Id="enterQueryHere" Text="Enter an SQL query here" Placeholder="Enter an SQL query here" />
+	<Value Id="execute" Text="Execute" Content="Execute" />
+	<Value Id="success" Text="Success!" Content="Success!" />
+	<Value Id="asc" Content="Ascending" />
+	<Value Id="desc" Content="Descending" />
+	<Value Id="file" Header="File" />
+	<Value Id="deleteUnusedCovers" Header="Delete unused cover files" />
+	<Value Id="database" Header="Database" Content="Database" />
+	<Value Id="backupDatabase" Header="Backup database" />
+	<Value Id="manageBackups" Header="Manage backups" />
+	<Value Id="executeQuery" Header="Execute query" />
+	<Value Id="vacuum" Header="Vacuum" />
+	<Value Id="empty" Header="Empty" />
+	<Value Id="preferences" Header="Preferences" />
+	<Value Id="view" Header="View" />
+	<Value Id="toggleSidebar" Header="Open sidebar" />
+	<Value Id="toggleFullscreen" Header="Toggle fullscreen" />
+	<Value Id="help" Header="Help" />
+	<Value Id="about" Header="About" />
+	<Value Id="nothingHere" Content="There's nothing here" />
+	<Value Id="searchSeries" Text="Search series" Placeholder="Search series" Content="Search series" />
+	<Value Id="removeCovers" Header="Remove covers" />
+	<Value Id="copySerieTitle" Header="Copy serie's title" />
+	<Value Id="copySeasonTitle" Header="Copy season's title" />
+	<Value Id="owned" Text="Owned" />
+	<Value Id="total" Text="Total" />
+	<Value Id="fileNotFound" Text="Linked file not found" />
+	<Value Id="noFile" Text="No linked file" />
+	<Value Id="operationFinished" Text="Operation finished!" />
+	<Value Id="noItemSelected" Text="No item selected" />
+	<Value Id="pleaseSelectItem" Text="Please select an item in the list first." />
+	<Value Id="vacuumSuccess" Text="Database vacuumed succesfully" />
+	<Value Id="nothingToContinue" Text="Nothing to continue" />
+	<Value Id="fileCopiedTitle" Text="File copied!" />
+	<Value Id="fileCopiedDescr" Text="File '{0}' copied to clipboard." />
+	<Value Id="noEpisodes" Text="You don't have any episodes" />
+	<Value Id="removeUnusedCovers" Text="This operation will remove unused covers from disk." />
+	<Value Id="sidebarSynopsis" Text="Click here to set the synopsis..." />
+	<Value Id="deleteFromDb" Text="Delete {0} from database?" />
+	<Value Id="deleteMultipleFromDb" Text="Delete those {0} items from database?" />
+	<Value Id="all" Text="All" />
+	<Value Id="none" Text="None" Content="None" />
+	<Value Id="toWatch" Text="To watch" Content="To watch" />
+	<Value Id="current" Text="Current" Content="Current" />
+	<Value Id="standBy" Text="Stand by" Content="Stand by" />
+	<Value Id="finished" Text="Finished" Content="Finished" />
+	<Value Id="dropped" Text="Dropped" Content="Dropped" />
+	<Value Id="notWatched" Text="Not watched" />
+	<Value Id="perso" Text="Perso..." Content="Perso..." />
+	<Value Id="refresh" ToolTip="Refresh" />
+	<Value Id="modeContains" Content="Mode: contains" />
+	<Value Id="modeStartsWith" Content="Mode: starts with" />
+	<Value Id="fieldTitle" Content="Field: title" />
+	<Value Id="fieldStudio" Content="Field: studio" />
+	<Value Id="fileRemovalSuccess" Content="{0} files deleted." />
+	<Value Id="dbBackupSaved" Text="Database restore point saved!" />
+	<Value Id="noEpisodeDescr" Text="There is no unwatched episode left" />
+	<Value Id="markAllWatched" Content="Mark as watched" />
+	<Value Id="markAllNotWatched" Header="Mark as not watched" />
+	<Value Id="actionsForAll" Header="Actions for all" />
+	<Value Id="episodesAdded" Content="{0} episode(s) added" />
+	<Value Id="serie" Content="serie" Plural="series" />
+	<Value Id="season" Content="season" Plural="seasons" />
+	<Value Id="episode" Content="episode" Plural="episodes" />
+	<Value Id="titleCopied" Content="{0} title copied!" />
+	<Value Id="copiedToClipboard" Content="'{0}' copied to clipboard" />
+	<Value Id="yes" Content="Yes" />
+	<Value Id="no" Content="No" />
+	<Value Id="confirmDeletion" Content="Confirm deletion" />
+	<Value Id="atLeastOneSeason" Text="A series must always have at least one season." />
+	<Value Id="actionCanceled" Content="Action canceled" />
+	<Value Id="noElements" Text="No element(s) to apply this action to" />
+	<Value Id="big" Content="Big" />
+	<Value Id="small" Content="Small" />
+	<Value Id="list" Content="List" />
+	<Value Id="restart" Content="Restart" />
+	<Value Id="restartNow" Content="Restart now" />
+	<Value Id="continueNoRestart" Content="Continue without restarting" />
+	<Value Id="deleteImage" Content="Delete image" />
+	<Value Id="serieTitle" Text="Serie title" Placeholder="Serie title" />
+	<Value Id="coverUri" Text="Cover path" Placeholder="Image path" />
+	<Value Id="restore" Content="Restore" />
+	<Value Id="rename" Content="Rename" />
+	<Value Id="selectItemFirst" Content="Select an item first" />
+	<Value Id="checkForUpdate" Header="Check for update" />
+	<Value Id="noNewVersion" Content="No new version available" />
+	<Value Id="versionAvailable" Content="Update to release {0}" />
+	<Value Id="updateDescr" Text="A new version is available." />
+	<Value Id="starting" Content="Starting..." />
+	<Value Id="update" Content="Update" />
+	<Value Id="uncontiguousEpisodeNumber" Content="The last watched episode was episode {0} but there is no episode {1}. You may have a missing episode. Do you want to play episode {2} anyway?" />
+	<Value Id="naturalOrder" Content="Set numbers in the list order from" />
+	<Value Id="exit" Content="Exit" />
+	<Value Id="loading" Content="Loading..." />
+	<Value Id="noCoversFound" Content="No covers found" />
+	<Value Id="downloadingCover" Content="Downloading cover..." />
+	<Value Id="episodeNoFile" Content="Episode {0} does not have a linked file." />
+	<Value Id="dataManager" Header="Data manager" Title="Data manager" />
+	<Value Id="customSearch" Header="Custom search" Title="Custom search" />
+	<Value Id="year" Content="Year" />
+	<Value Id="premiered" Content="Premiered" />
+	<Value Id="numberOfSeasons" Content="Number of seasons" />
+	<Value Id="numberOfEpisodes" Content="Number of episodes" />
+	<Value Id="spring" Text="Spring" />
+	<Value Id="summer" Text="Summer" />
+	<Value Id="fall" Text="Fall" />
+	<Value Id="winter" Text="Winter" />
+	<Value Id="unknown" Text="Unknown" />
+	<Value Id="updated" Text="Updated!" />
+	<Value Id="updatedDescr" Text="Hieda updated to version {0}, build {1}" />
+	<Value Id="reloadTheme" Header="Reload theme" />
+	<Value Id="apply" Content="Apply" />
+	<Value Id="test" Content="Test" />
+	<Value Id="import" Content="Import" />
+	<Value Id="episodesImport" Content="Import episodes" />
+	<Value Id="clickToEdit" Text="Click to edit" />
+	<Value Id="error" Text="Error" />
+	<Value Id="warning" Text="Warning" />
+	<Value Id="cantConnectDb" Text="Can't connect to database" />
+	<Value Id="dbCopyError" Text="Error while trying to copy database file" />
+	<Value Id="compactDb" Text="This operation will compact the database to reduce its size and make it faster (a backup will be made just in case)." />
+	<Value Id="deleteUnusedCover" Text="Delete unused cover files" />
+	<Value Id="vacuumDb" Text="Vacuum database" />
+	<Value Id="emptyDbDescr" Text="The database will be completly wiped. This operation cannot be undone but a backup will be made." />
+	<Value Id="invalidName" Text="This name is invalid or already exists, please select another one." />
+	<Value Id="mustRestart" Text="Hieda must restart for applying those changes." />
+	<Value Id="dbRestoreFailure" Text="Unable to restore this file, may be already opened elsewhere." />
+	<Value Id="deleteAllSelected" Text="Delete all selected" />
+	<Value Id="editAllSelected" Text="Edit all selected" />
+	<Value Id="selectAll" Text="Select all" />
+	<Value Id="deselectAll" Text="Unselect all" />
+	<Value Id="switchList" Text="Switch list" />
+	<Value Id="addSerie" Text="Add a serie" />
+	<Value Id="addSeason" Text="Add a season" />
+	<Value Id="addEpisode" Text="Add an episode" />
+	<Value Id="editSerie" Text="Edit this serie" />
+	<Value Id="editSeason" Text="Edit this season" />
+	<Value Id="editEpisode" Text="Edit this episode" />
+	<Value Id="importEpisodes" Title="Import episodes" />
+	<Value Id="changeMultipleCovers" Text="Change covers" />
+	<Value Id="copyPath" Text="Copy path" />
+	<Value Id="copied" Text="Copied!" />
+	<Value Id="importSubtitle" Text="Import subtitle file" />
+	<Value Id="fileImported" Text="File {0} imported!" />
+	<Value Id="replaceEpisodes" Content="Replace episodes with the same number" />
+	<Value Id="frameGenerationFailed" Text="Generation failed" />
+	<Value Id="badFFmpegPath" Text="Invalid path to FFmpeg.exe." />
+	<Value Id="generate" Content="Generate" />
+	<Value Id="defaultPlayer" Content="System default" Header="Default player" />
+	<Value Id="playWith" Header="Play with" />
+	<Value Id="thumbnailFormat" Content="Thumbnail format" />
+	<Value Id="thumbnailWidth" Content="Thumbnail width ({0})" />
+	<Value Id="formatJpg" Content="JPG (lower quality and file size)" />
+	<Value Id="formatPng" Content="PNG (greater quality and file size)" />
+	<Value Id="frameTimestamp" Content="Frame timestamp" />
+	<Value Id="pathToFfmpeg" Content="Path to ffmpeg.exe" />
+	<Value Id="search" Content="Search" />
+	<Value Id="moveAllSelected" Header="Move all selected" />
+	<Value Id="movedSeasons" Text="{0} seasons moved to series '{1}'" />
+	<Value Id="movedEpisodes" Text="{0} episodes moved to season '{1}'" />
+	<Value Id="numberedFrom" Content="Numbered from" />
+	<Value Id="emptyCache" Header="Remove cached files" />
+	<Value Id="dbRestoreSuccess" Text="Database restored!\nIts content will be displayed once the window is closed." />
+	<Value Id="tv" Content="TV" />
+	<Value Id="ova" Content="OVA" />
+	<Value Id="movie" Content="Movie" />
+	<Value Id="manga" Content="Manga" />
+	<Value Id="special" Content="Special" />
+	<Value Id="novel" Content="Novel" />
+	<Value Id="doujinshi" Content="Doujinshi" />
+	<Value Id="artbook" Content="Artbook" />
+	<Value Id="magazine" Content="Magazine" />
+	<Value Id="missingTitle" Text="Please enter the title at least." />
+	<Value Id="enableRpc" Content="Enable RPC" />
+	<Value Id="back" ToolTip="Back" />
+	<Value Id="forward" ToolTip="Forward" />
+	<Value Id="resetAndExit" Content="Reset settings and restart" />
+	<Value Id="updateLatest" Content="Update with latest version" />
+	<Value Id="clientId16Digits" Text="The client ID must be a 18 digits value." />
+	<Value Id="missingClientId" Text="You need to enter your own client ID for using '{0}' as an image key." />
+	<Value Id="selectSerieOrSeason" Text="First select a serie, season, or go to episodes level." />
+	<Value Id="tile" Content="Tile" />
+	<Value Id="row" Content="Row" />
+	<Value Id="label" Content="Label" />
+	<Value Id="fetchOnline" Content="Fetch from online sources" />
+	<Value Id="title" Content="Title" />
+	<Value Id="studio" Content="Studio" />
+	<Value Id="original" Content="Original" />
+	<Value Id="manga" Content="Manga" />
+	<Value Id="webManga" Content="Web manga" />
+	<Value Id="novel" Content="Novel" />
+	<Value Id="lightNovel" Content="Light novel" />
+	<Value Id="language" Content="Language" />
+	<Value Id="theme" Content="Theme" />
+	<Value Id="startingView" Content="View mode" />
+	<Value Id="continueOnClose" Content="Open next episode when the player is closed" />
+	<Value Id="savePositionOnQuit" Content="Save position on quit" />
+	<Value Id="cannotPlayEpisode" Content="Cannot play episode" />
+	<Value Id="noLinkedEpisode" Content="No linked file or URL for this episode." />
+	<Value Id="chapter" Content="chapter" Plural="chapters" />
+	<Value Id="switchViewMode" ToolTip="Switch between series and seasons views" />
+	<Value Id="dropboxNotLogged" Content="Not logged into Dropbox." />
+	<Value Id="dropboxLogged" Content="Logged into Dropbox." />
+	<Value Id="authenticate" Content="Authenticate" />
+	<Value Id="authenticated" Content="Authenticated" />
+	<Value Id="retrieve" Content="Retrieve" />
+	<Value Id="send" Content="Send" />
+	<Value Id="downloading" Content="Downloading" />
+	<Value Id="downloaded" Content="Downloaded" />
+	<Value Id="uploading" Content="Uploading" />
+	<Value Id="uploaded" Content="Uploaded" />
+	<Value Id="prefs_BackupDbOnExit" Content="Backup database on exit" />
+	<Value Id="prefs_AnimeLoc" Content="Anime folder location" />
+	<Value Id="prefs_DbLoc" Content="Database folder location" />
+	<Value Id="prefs_CoverLoc" Content="Cover folder location" />
+	<Value Id="prefs_SearchMethod" Content="Search method" />
+	<Value Id="prefs_updateOnStartup" Content="Check for update on startup" />
+	<Value Id="prefs_RememberFilter" Content="Restore last selected filter on startup" />
+	<Value Id="prefs_DiscordRpc" Content="Enable Discord RPC integration" />
+	<Value Id="prefs_DiscordRpcLink" Text="What is that ?" />
+	<Value Id="prefs_TileOverlay" Content="Tile overlay" />
+	<Value Id="prefs_HoverEffet" Content="Hover effect" />
+	<Value Id="prefs_Direct" Content="When a serie only have one season, go directly to episodes" />
+	<Value Id="prefs_MarkAsWatched" Content="Mark an episode as watched after launching it" />
+	<Value Id="prefs_SortBy" Content="Sort series by" />
+	<Value Id="prefs_TileNumber" Content="Show episodes numbers on tiles" />
+	<Value Id="prefs_VideoThumb" Content="For episodes, display video thumb as cover when possible (slower)" />
+	<Value Id="prefs_LoadAfter" Content="Load covers after all items in the list (faster)" />
+	<Value Id="prefs_LoadAnimation" Content="Animation de chargement" Tooltip="Show tile with fade-in effect" />
+	<Value Id="prefs_SidebarBackground" Content="Display cover as sidebar background (slower)" />
+	<Value Id="prefs_CollectionBg" Content="Display cover as collection background (slower)" />
+	<Value Id="pref_Progressive" Content="Progressive load (faster)" />
+	<Value Id="prefs_TaskBarCorrect" Content="Enable auto-hide taskbar correction" />
+	<Value Id="prefs_FakeEpisodes" Content="Add missing episodes" />
+	<Value Id="prefs_EnableNotify" Content="Enable notifications" />
+	<Value Id="prefs_ShowOverlay" Content="Show overlay when launching episode" />
+	<Value Id="prefs_ExperimentalFeatures" Header="Experimental features (may cause crashes!)" />
+	<Value Id="prefs_FlatLevel" Content="Do not group by series (restart needed)" />
+	<Value Id="prefs_WhileScrolling" Content="Load while scrolling" />
+	<Value Id="prefs_WideEpisodeTile" Content="Use 16/9 episode tiles" />
+	<Value Id="prefs_LoadingSpeed" Content="Tile loading speed ({0} milliseconds)" />
+	<Value Id="prefs_ReplaceFileByDrop" Content="Can replace an episode file by dropping one over it" />
+	<Value Id="prefs_VideoPlayer" Header="Video player" />
+	<Value Id="prefs_PreferedPlayer" Content="Prefered player" />
+	<Value Id="prefs_FullscreenPlayer" Content="Open in fullscreen" />
+	<Value Id="dbVersionMismatch" Text="Warning, your database is from a newer version of Hieda (r{0}). Consider updating to the latest version to prevent incompatibilities." />
+	<Value Id="githubParseError" Text="Unable to find the latest release.\nPlease check the Github repository to download it.\n\n" />
+	<Value Id="updateInstallError" Text="Error while installing the update." />
+	<Value Id="numberToAdd" Content="Add this many" />
+	<Value Id="prefs_GenerateThumbOnLaunch" Content="Try to generate a cover when an episode without one is launched" />
+	<Value Id="episodesDisplayFormat" Content="Episodes display format" />
+	<Value Id="landscape" Content="Landscape" />
+	<Value Id="portrait" Content="Portrait" />
+	<Value Id="linkedFileReplaced" Content="Linked file replaced for '{0}'" />
+	<Value Id="coverFileReplaced" Content="Cover replaced for '{0}'" />
+	<Value Id="editingSeries" Text="Editing {0} series" />
+	<Value Id="editingSeasons" Text="Editing {0} seasons" />
+	<Value Id="editingEpisodes" Text="Editing {0} episodes" />
+	<Value Id="january" Content="January" />
+	<Value Id="february" Content="February" />
+	<Value Id="march" Content="March" />
+	<Value Id="april" Content="April" />
+	<Value Id="may" Content="May" />
+	<Value Id="june" Content="June" />
+	<Value Id="july" Content="July" />
+	<Value Id="august" Content="August" />
+	<Value Id="september" Content="September" />
+	<Value Id="october" Content="October" />
+	<Value Id="november" Content="November" />
+	<Value Id="december" Content="December" />
+	<Value Id="fileDoesNotExists" Text="This file does not exists" />
+</Dictionary>

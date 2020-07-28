@@ -1,0 +1,32 @@
+﻿<Window
+	x:Class="Hieda.View.Window.CrashReport"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	WindowStartupLocation="CenterOwner"
+	Title="CrashReport"
+	Width="592" Height="507"
+	ScrollViewer.VerticalScrollBarVisibility="Disabled"
+	WindowStyle="ToolWindow"
+	ResizeMode="NoResize">
+	<Grid Background="Black">
+		<MediaElement x:Name="gif" MediaEnded="MediaElement_MediaEnded" UnloadedBehavior="Manual" Source="pack://siteoforigin:,,,/res/crash.gif" LoadedBehavior="Play" Height="121" VerticalAlignment="Top" HorizontalAlignment="Left" Width="57"/>
+		<Label x:Name="label_Message" Content="Label" Margin="0,129,10,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Console"/>
+		<Label x:Name="label_Data" Content="Label" Margin="67,93,10,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Console"/>
+		<Label x:Name="label_Source" Content="Label" Margin="67,10,10,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Console"/>
+		<Label x:Name="label_Type" Content="Label" Margin="67,50,10,0" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Console"/>
+		<ScrollViewer Margin="0,151,0,0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="273" VerticalAlignment="Top">
+			<TextBlock x:Name="textblock_Traceback" TextWrapping="Wrap" Text="TextBlock" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontFamily="Lucida Console" FontSize="10" Foreground="Black" Background="{StaticResource {x:Static SystemColors.ControlLightBrushKey}}">
+				<TextBlock.ContextMenu>
+					<ContextMenu>
+						<MenuItem Header="Copy" Click="Copy_Click"/>
+					</ContextMenu>
+				</TextBlock.ContextMenu>
+			</TextBlock>
+		</ScrollViewer>
+		<Button loc:Translate.Uid="restart" Content="{loc:Translate Restart}" Click="Button_Restart_Click" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="293"/>
+		<Button loc:Translate.Uid="exit" Content="{loc:Translate Exit}" Margin="293,0,0,0" Click="Button_Exit_Click" Height="22" VerticalAlignment="Bottom"/>
+		<Button loc:Translate.Uid="resetAndExit" Content="{loc:Translate Reset settings and restart}" Margin="0,0,0,22" Click="Button_Reset_Click" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="293"/>
+		<Button loc:Translate.Uid="updateLatest" Content="{loc:Translate Update with latest version}" Margin="293,0,0,22" Click="Button_Update_Click" Height="22" VerticalAlignment="Bottom"/>
+	</Grid>
+</Window>

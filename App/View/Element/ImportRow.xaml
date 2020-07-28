@@ -1,0 +1,17 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	xmlns:local="clr-namespace:Hieda.View.Element"
+	x:Class="Hieda.View.Element.ImportRow"
+	mc:Ignorable="d"
+	Height="30">
+	<Grid>
+		<local:PlaceholderTextBox x:Name="textbox_Name" HorizontalAlignment="Right" Height="23" Margin="0,3,106,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="149" ToolTip="Si vide, le nom du fichier sera utilisé" Placeholder="Nom (facultatif)..." MaxLength="99"/>
+		<CheckBox x:Name="checkbox_Viewed" loc:Translate.Uid="watched" Content="{loc:Translate Watched}" Margin="0,7,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="70"/>
+		<local:PlaceholderTextBox x:Name="textbox_Filepath" HorizontalAlignment="Stretch" Height="23" Margin="0,3,260,0" TextWrapping="NoWrap" Text="Filepath" VerticalAlignment="Top" Width="Auto" VerticalContentAlignment="Center"/>
+		<TextBox x:Name="textbox_Number" Height="23" Margin="0,3,75,0" TextWrapping="NoWrap" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="TextBox_Number_TextChanged" Text="0" MaxLength="3" HorizontalAlignment="Right" Width="26"/>
+	</Grid>
+</UserControl>

@@ -1,0 +1,11 @@
+﻿<Window
+	x:Class="Hieda.View.Window.Overlay"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Overlay" Height="294" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" Foreground="{x:Null}" Background="#99000000" AllowsTransparency="True" IsHitTestVisible="False" IsTabStop="False" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Topmost="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" ShowInTaskbar="False">
+	<Grid VerticalAlignment="Center">
+		<Label x:Name="label_Middle" Content="Middle" Background="{x:Null}" Foreground="White" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,0"/>
+		<Label x:Name="label_Header" Content="Header" VerticalAlignment="Top" Foreground="White" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,0"/>
+		<Label x:Name="label_Footer" Content="Footer" VerticalAlignment="Top" Foreground="White" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,263,10,0"/>
+	</Grid>
+</Window>

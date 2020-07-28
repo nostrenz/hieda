@@ -1,0 +1,18 @@
+﻿<Window
+	x:Class="Hieda.View.Window.About"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	WindowStartupLocation="CenterOwner"
+	Title="About"
+	Width="304.149" Height="150.597"
+	ResizeMode="NoResize">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<Label Content="Hieda" HorizontalAlignment="Left" Margin="4,14,0,0" VerticalAlignment="Top" FontSize="20"/>
+		<Label Content="- Nostre" HorizontalAlignment="Left" Margin="4,39,0,0" VerticalAlignment="Top" FontSize="11"/>
+		<Image HorizontalAlignment="Left" Height="100" Margin="214,10,0,0" VerticalAlignment="Top" Width="80" Source="pack://application:,,,/res/hieda.png" Stretch="UniformToFill" MouseUp="Picture_MouseUp" RenderOptions.BitmapScalingMode="LowQuality"/>
+		<Label Content="&quot;Not forgetting things seen once&quot;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="11" Margin="-3,-3,0,0"/>
+		<Label x:Name="label_build" Content="build:" HorizontalAlignment="Left" Margin="120,89,0,0" VerticalAlignment="Top" FontSize="10"/>
+		<Label x:Name="label_programVersion" Content="Program version:" HorizontalAlignment="Left" Margin="120,33,0,0" VerticalAlignment="Top" FontSize="10"/>
+		<Label x:Name="label_dbVersion" Content="DB version:" HorizontalAlignment="Left" Margin="120,61,0,0" VerticalAlignment="Top" FontSize="10"/>
+	</Grid>
+</Window>

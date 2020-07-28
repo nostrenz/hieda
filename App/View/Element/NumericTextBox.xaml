@@ -1,0 +1,10 @@
+﻿<TextBox
+	x:Class="Hieda.View.Element.NumericTextBox"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	mc:Ignorable="d"
+	d:DesignWidth="37" d:DesignHeight="23"
+	Width="Auto" Height="Auto"
+	HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />

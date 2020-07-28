@@ -1,0 +1,71 @@
+﻿<UserControl
+	x:Name="UC_Collection" x:Class="Hieda.View.Element.Collection"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:Element="clr-namespace:Hieda.View.Element"
+	xmlns:local="clr-namespace:Hieda.View.Element"
+	mc:Ignorable="d"
+	d:DesignHeight="300"
+	Width="698"
+	KeyUp="TileList_KeyUp">
+	<Grid x:Name="grid_Background">
+		<!-- Controls bar -->
+		<Image x:Name="button_Back" HorizontalAlignment="Left" Margin="19,7,0,0" VerticalAlignment="Top" Height="30" Width="19" Stretch="Fill" MouseLeftButtonUp="Button_Back_MouseLeftButtonUp" MouseEnter="Button_Back_MouseEnter" MouseLeave="Button_Back_MouseLeave" Source="{StaticResource Img_Back}" loc:Translate.Uid="back" ToolTip="{loc:Translate Back}" RenderOptions.BitmapScalingMode="LowQuality"/>
+		<Image x:Name="button_Forward" HorizontalAlignment="Left" Margin="49,7,0,0" VerticalAlignment="Top" Height="31" Width="19" Stretch="Fill" Source="{StaticResource Img_Back}" loc:Translate.Uid="forward" ToolTip="{loc:Translate Forward}" RenderTransformOrigin="0.5,0.5" MouseEnter="Button_Forward_MouseEnter" MouseLeftButtonUp="Button_Forward_MouseLeftButtonUp" MouseLeave="Button_Forward_MouseLeave" RenderOptions.BitmapScalingMode="LowQuality">
+			<Image.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleY="1" ScaleX="-1"/>
+					<SkewTransform AngleY="0" AngleX="0"/>
+					<RotateTransform Angle="0"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Image.RenderTransform>
+		</Image>
+		<Label x:Name="label_Breadcrumb" HorizontalAlignment="Left" Margin="82,3,0,0" VerticalAlignment="Top" FontSize="23" Height="42" Foreground="{DynamicResource HeaderTextColor}">
+			<Label.Content>
+				<AccessText TextWrapping="Wrap" Text="..."/>
+			</Label.Content>
+		</Label>
+		<ComboBox x:Name="combobox_Selector" HorizontalAlignment="Right" Margin="0,0,143,0" VerticalAlignment="Top" Width="82" Height="20" SelectionChanged="ComboBox_Selector_SelectionChanged"/>
+		<ComboBox x:Name="ComboBox_Types" HorizontalAlignment="Right" VerticalAlignment="Top" Width="82" Height="20" Margin="0,20,143,0" DropDownClosed="ComboBox_Types_DropDownClosed"/>
+		<!-- The following label is used as defaut text for ComboBox_Types-->
+		<Label Content="Types" IsHitTestVisible="False" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,23,186,0" Foreground="{DynamicResource Collection_TextColor}" Width="36" Height="13" VerticalContentAlignment="Center" Padding="0" FontSize="11" Background="{DynamicResource ButtonBrush}"/>
+
+		<Image x:Name="button_Refresh" loc:Translate.Uid="refresh" HorizontalAlignment="Right" Margin="0,7,92,0" VerticalAlignment="Top" Width="30" Height="30" Stretch="Fill" Source="{StaticResource Img_Refresh}" MouseEnter="Button_Refresh_MouseEnter" MouseLeave="Button_Refresh_MouseLeave" ToolTip="{loc:Translate Refresh}" RenderOptions.BitmapScalingMode="LowQuality" MouseLeftButtonUp="Image_Refresh_MouseLeftButtonUp"/>
+		<Image x:Name="button_Add" loc:Translate.Uid="add" HorizontalAlignment="Right" Margin="0,7,52,0" VerticalAlignment="Top" Width="30" Height="30" Stretch="Fill" Source="{StaticResource Img_Add}" MouseLeftButtonUp="Button_Add_MouseLeftButtonUp" MouseEnter="Button_Add_MouseEnter" MouseLeave="Button_Add_MouseLeave" ToolTip="{loc:Translate Add}" RenderOptions.BitmapScalingMode="LowQuality" MouseDown="Button_Add_MouseLeftButtonDown"/>
+
+		<ComboBox x:Name="ComboBox_SearchOptions" HorizontalAlignment="Right" Margin="0,11,247,0" VerticalAlignment="Top" Width="206" Height="23" SelectedIndex="0" SelectionChanged="ComboBox_SearchOptions_SelectionChanged" DropDownClosed="ComboBox_SearchOptions_DropDownClosed">
+			<RadioButton loc:Translate.Uid="modeContains" Content="{loc:Translate Mode: contain}" GroupName="SearchMode" IsChecked="True"/>
+			<RadioButton loc:Translate.Uid="modeStartsWith" Content="{loc:Translate Mode: starting with}" GroupName="SearchMode"/>
+			<Separator Background="{DynamicResource TextColor_NothingMsg}"/>
+			<RadioButton loc:Translate.Uid="fieldTitle" Content="{loc:Translate Field: title}" GroupName="SearchField" IsChecked="True"/>
+			<RadioButton loc:Translate.Uid="fieldStudio" Content="{loc:Translate Field: studio}" GroupName="SearchField"/>
+			<Separator Background="{DynamicResource TextColor_NothingMsg}"/>
+			<ComboBoxItem loc:Translate.Uid="customSearch" Content="{loc:Translate Custom search}"/>
+		</ComboBox>
+		<Button x:Name="button_ToggleViewMode" Content="/" loc:Translate.Uid="switchViewMode" ToolTip="{loc:Translate Switch between series and seasons views}" VerticalAlignment="Top" Height="36" Width="18" HorizontalAlignment="Right" Margin="0,4,0,0" Click="Button_SwitchViewMode_Click"/>
+		<local:PlaceholderTextBox x:Name="textbox_Search" Text="" Placeholder="" HorizontalAlignment="Right" Margin="0,11,264,0" VerticalAlignment="Top" loc:Translate.Uid="searchSeries" Height="23" TextChanged="TextBox_Search_TextChanged" Width="189" Padding="0,0,20,0"/>
+		<Image x:Name="image_Search" HorizontalAlignment="Right" Height="17" Margin="0,14,267,0" VerticalAlignment="Top" Width="17" Source="{StaticResource Img_Glass}" MouseEnter="Image_Search_MouseEnter" MouseLeave="Image_Search_MouseLeave" MouseDown="Image_Search_MouseDown" RenderOptions.BitmapScalingMode="LowQuality"/>
+		<Label x:Name="label_Counter" Content="00" HorizontalAlignment="Right" Margin="0,-10,475,0" VerticalAlignment="Top" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="57" Height="39" Foreground="{DynamicResource HeaderTextColor}"/>
+		<Label x:Name="label_Level" loc:Translate.Uid="series" Content="{loc:Translate Series}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Margin="0,14,468,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="70" Height="29" Foreground="{DynamicResource HeaderTextColor}" Padding="0,5"/>
+		<!-- Items list -->
+		<Border Margin="0,45,0,0" BorderThickness="0,1,0,0" BorderBrush="{StaticResource Collection_BorderColor}">
+			<Grid Background="{DynamicResource Collection_ItemslistColor}">
+				<Image x:Name="BackgroundImage" Stretch="UniformToFill" Opacity="0.04" IsHitTestVisible="False" RenderOptions.BitmapScalingMode="LowQuality" RenderOptions.EdgeMode="Aliased" VerticalAlignment="Center" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+					<Image.Effect>
+						<BlurEffect Radius="10"/>
+					</Image.Effect>
+				</Image>
+				<Label x:Name="label_Nothing" loc:Translate.Uid="nothingHere" Content="{loc:Translate Nothing here...}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="52" Foreground="{StaticResource TextColor_NothingMsg}" IsHitTestVisible="False" />
+				<ScrollViewer x:Name="ScrollViewer" Background="Transparent" VerticalScrollBarVisibility="Visible" Focusable="False" IsDeferredScrollingEnabled="False" CanContentScroll="True" VirtualizingPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollChanged="ScrollViewer_ScrollChanged" Drop="ScrollViewer_Drop" DragEnter="ScrollViewer_DragEnter">
+					<Grid x:Name="grid_Content" VirtualizingPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling" Margin="10,20,0,0"/>
+				</ScrollViewer>
+				<Grid x:Name="grid_ListBlackout" Background="#B2000000" MouseDown="Grid_ListBlackout_MouseDown"/>
+				<Element:Sidebar x:Name="Sidebar" HorizontalAlignment="Left"/>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

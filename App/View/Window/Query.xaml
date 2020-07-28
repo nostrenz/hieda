@@ -1,0 +1,18 @@
+﻿<Window
+	x:Class="Hieda.View.Window.Query"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	WindowStartupLocation="CenterOwner"
+	xmlns:Element="clr-namespace:Hieda.View.Element"
+	Title="Query"
+	Width="478" Height="206" MinHeight="206" MaxHeight="206"
+	ResizeMode="CanResize">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<CheckBox x:Name="checkbox_Backup" loc:Translate.Uid="conserveBackupQuery" Content="{loc:Translate Conserve a backup before executing the query}" Margin="10,10,10,0" VerticalAlignment="Top"/>
+		<Element:PlaceholderTextBox x:Name="textbox_Query" loc:Translate.Uid="enterQueryHere" HorizontalAlignment="Stretch" Margin="10,42,10,0" VerticalAlignment="Top" Width="Auto" Height="34" Text="Enter an SQL query here" Placeholder="Enter an SQL query here"/>
+		<Button x:Name="button_Execute" loc:Translate.Uid="execute" Content="{loc:Translate Execute}" Margin="10,0,10,10" Click="Button_Execute_Click" Height="24" VerticalAlignment="Bottom"/>
+		<ComboBox x:Name="combo_Presets" Margin="63,97,10,0" VerticalAlignment="Top" SelectionChanged="ComboBox_Presets_SelectionChanged"/>
+		<Label Content="Presets" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top"/>
+	</Grid>
+</Window>

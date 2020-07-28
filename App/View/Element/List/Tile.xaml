@@ -1,0 +1,51 @@
+﻿<local:Item
+	x:Name="UC_Tile" x:Class="Hieda.View.Element.List.Tile"
+	xmlns:local="clr-namespace:Hieda.View.Element.List"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:element="clr-namespace:Hieda.View.Element"
+	xmlns:constants="clr-namespace:Hieda"
+	mc:Ignorable="d"
+	HorizontalAlignment="Left" VerticalAlignment="Top"
+	MouseDoubleClick="Tile_DoubleClick" DragEnter="tile_DragEnter" Drop="Tile_Drop">
+	<Grid x:Name="Grid_Root" Width="{x:Static constants:Constants.DoubleTileWidth}" Height="334">
+		<Border x:Name="Border_CoverBorder" BorderBrush="Black" BorderThickness="3" Margin="0,0,0,38">
+			<Grid IsHitTestVisible="True">
+				<Image x:Name="Image_Cover" LostFocus="cover_LostFocus" GotFocus="cover_GotFocus" MouseDown="cover_MouseDown" Source="pack://application:,,,/res/no.jpg" MouseEnter="cover_MouseEnter" MouseLeave="cover_MouseLeave" Stretch="Fill" ContextMenuOpening="cover_ContextMenuOpening" RenderOptions.BitmapScalingMode="LowQuality"/>
+				<Grid x:Name="Grid_CoverOverlay" IsHitTestVisible="False">
+					<Label x:Name="Label_Status_Big" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontSize="70" RenderTransformOrigin="0.5,0.5" IsHitTestVisible="False" Background="#00000000">
+						<Label.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform Angle="10"/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Label.RenderTransform>
+					</Label>
+					<Label x:Name="Label_EpisodesValues" Opacity="0" Content="0/0/0" Foreground="#CC91EE91" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="#7F000000"/>
+					<Label x:Name="Label_EpisodesValuesDescr" Opacity="0" Content="Watched/Owned/Total" Foreground="#CC91EE91" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Margin="0,0,0,60"/>
+					<Image x:Name="Image_EpisodePlay" Source="pack://siteoforigin:,,,/res/play-big.png" Opacity="0.75" RenderOptions.BitmapScalingMode="LowQuality" Width="128">
+						<Image.Effect>
+							<DropShadowEffect Opacity="0.85" Direction="1" ShadowDepth="1" BlurRadius="7"/>
+						</Image.Effect>
+					</Image>
+				</Grid>
+				<element:EditableLabel x:Name="Field_Number" HorizontalAlignment="Right" Width="98" FontSize="45" Foreground="#CC91EE91" LabelBackground="Transparent" TextboxBgColor="{StaticResource Collection_BackgroundColor}" TextboxWidth="98" TextboxHeight="53" Margin="0,0,10,10" TextAlignment="Right" BorderThickness="0" Height="53" VerticalAlignment="Bottom" HideText="0" IsMultiline="False"/>
+				<Label x:Name="Label_Status_Small" VerticalAlignment="Bottom" FontSize="30" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="63" Background="#B2000000" IsHitTestVisible="False" />
+				<Label x:Name="Label_SeasonsCounter" Foreground="White" Content="2 saisons" Height="17" Width="96" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Bottom" Padding="5,0,0,0"/>
+				<Label x:Name="Label_EpisodesCounter" Foreground="White" Content="34 episodes" Height="17" Width="103" FontSize="10" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0,0,5,0" Margin="0"/>
+				<Image x:Name="Button_Continue" Opacity="0" Margin="9,10,0,0" MouseEnter="button_Continue_MouseEnter" MouseDown="button_Continue_MouseDown" Source="pack://siteoforigin:,,,/res/play-small.png" RenderOptions.BitmapScalingMode="LowQuality" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32">
+					<Image.Effect>
+						<DropShadowEffect Opacity="0.85" Direction="1" ShadowDepth="1" BlurRadius="7"/>
+					</Image.Effect>
+				</Image>
+				<Image x:Name="Image_NoLinkedFile" Opacity="0" Margin="9,10,0,0" Source="pack://siteoforigin:,,,/res/no-linked-file.png" RenderOptions.BitmapScalingMode="LowQuality" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32"/>
+				<Label x:Name="Label_Type"  HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="18" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="70" Height="32" Background="#B2000000" IsHitTestVisible="False" />
+			</Grid>
+		</Border>
+		<element:EditableLabel x:Name="Field_Title" Text="02" FontSize="13" LabelBackground="Transparent" TextboxBgColor="{StaticResource Collection_BackgroundColor}" TextAlignment="Center" Foreground="{StaticResource Collection_TextColor}" TextWrapping="Wrap" BorderThickness="0" Height="33" VerticalAlignment="Bottom" />
+	</Grid>
+</local:Item>

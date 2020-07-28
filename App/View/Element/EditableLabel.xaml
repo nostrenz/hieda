@@ -1,0 +1,12 @@
+﻿<Grid
+x:Class="Hieda.View.Element.EditableLabel"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+mc:Ignorable="d"
+d:DesignWidth="98" d:DesignHeight="23"
+Cursor="Pen">
+	<TextBlock x:Name="Label" MouseDown="Label_MouseDown" TextWrapping="Wrap" TextAlignment="Justify" />
+	<TextBox x:Name="TextBox" TextWrapping="Wrap" LostFocus="TextBox_LostFocus" AcceptsReturn="True" AcceptsTab="True" SpellCheck.IsEnabled="False" />
+</Grid>

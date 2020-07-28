@@ -1,0 +1,12 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Element="clr-namespace:Hieda.View.Element"
+	x:Class="Hieda.View.Window.InputDialog"
+	Width="408.955" Height="139.104" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<Element:PlaceholderTextBox x:Name="textbox" HorizontalAlignment="Stretch" Margin="10,41,10,0" VerticalAlignment="Top" Width="Auto"/>
+		<Button x:Name="button_Ok" Content="Ok" Margin="10,0,10,10" Click="Button_Ok_Click" Height="20" VerticalAlignment="Bottom"/>
+		<Label x:Name="label" Content="Label" Margin="10,10,10,0" VerticalAlignment="Top"/>
+	</Grid>
+</Window>

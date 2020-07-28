@@ -1,0 +1,12 @@
+﻿<Window 
+	x:Class="Hieda.View.Window.DbUpdate"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Database update"
+	Width="368.667" Height="138.667" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<Label x:Name="label_Versions" Content="Database version: X | Program version: Y" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="333" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+		<Label x:Name="label_Progress" Content="(X) uptades left to version (Y)" Margin="10,41,20,0" VerticalAlignment="Top" Width="333" HorizontalAlignment="Center" RenderTransformOrigin="0.352,-0.577" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+		<ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="20" Margin="10,67,0,0" VerticalAlignment="Top" Width="333"/>
+	</Grid>
+</Window>

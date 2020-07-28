@@ -1,0 +1,31 @@
+# Ignore files build by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+#*.dll
+*.lib
+*.sbr
+
+# Build files
+App/obj/
+App/bin/
+Updater/obj/
+Updater/bin/
+
+# NuGET packages
+packages/*/
+packages/*/

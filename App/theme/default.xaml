@@ -1,0 +1,66 @@
+<ResourceDictionary
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+mc:Ignorable="d"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:Element="clr-namespace:Hieda.View.Element">
+
+	<!-- Static/Dynamic Ressources -->
+	<SolidColorBrush x:Key="Collection_BackgroundColor" Color="#F0F0F0"></SolidColorBrush>
+	<SolidColorBrush x:Key="Collection_ItemslistColor" Color="#F0F0F0"></SolidColorBrush>
+	<SolidColorBrush x:Key="Collection_TextColor" Color="black"></SolidColorBrush>
+	<SolidColorBrush x:Key="Collection_BorderColor" Color="Black"></SolidColorBrush>
+	<SolidColorBrush x:Key="TextColor_NothingMsg" Color="#66000000"></SolidColorBrush>
+	<SolidColorBrush x:Key="Tile_BorderColor" Color="#3A78FF"></SolidColorBrush>
+	<SolidColorBrush x:Key="WindowTitleColor" Color="Gray"></SolidColorBrush>
+	<SolidColorBrush x:Key="HeaderTextColor" Color="black"></SolidColorBrush>
+	<SolidColorBrush x:Key="Window_BackgroundColor" Color="#F0F0F0"></SolidColorBrush>
+
+	<ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+		<Grid x:Name="Grid">
+			<Border x:Name="BorderAndBackground" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3" />
+			<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+			<Grid x:Name="MouseOverGrid" Opacity="0">
+				<Border BorderThickness="0,1,0,1" Margin="1" BorderBrush="#FF707070" CornerRadius="3" />
+				<Border BorderThickness="0,1,0,1" Margin="2" BorderBrush="#FF707070" CornerRadius="3" />
+			</Grid>
+		</Grid>
+		<ControlTemplate.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="lightblue" />
+				<Setter Property="Padding" Value="7,1,5,-1" />
+				<Setter TargetName="MouseOverGrid" Property="Opacity" Value="0" />
+			</Trigger>
+			<Trigger Property="IsPressed" Value="True">
+				<Setter TargetName="MouseOverGrid" Property="Opacity" Value="1" />
+			</Trigger>
+			<Trigger Property="IsEnabled" Value="False">
+				<Setter Property="Background" Value="lightgray" />
+				<Setter Property="Foreground" Value="#FF707070" />
+				<Setter TargetName="MouseOverGrid" Property="Opacity" Value="0" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<Style TargetType="{x:Type Button}">
+		<Setter Property="SnapsToDevicePixels" Value="True" />
+		<Setter Property="OverridesDefaultStyle" Value="True" />
+		<Setter Property="Template" Value="{StaticResource ButtonTemplate}" />
+		<Setter Property="Background" Value="#FFDDDDDD" />
+		<Setter Property="BorderBrush" Value="#FF707070" />
+		<Setter Property="BorderThickness" Value="1" />
+		<Setter Property="Height" Value="25" />
+		<Setter Property="Padding" Value="6,0,6,0" />
+		<Setter Property="HorizontalContentAlignment" Value="Center" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
+	</Style>
+
+	<!-- Images -->
+	<BitmapImage x:Key="Img_Glass" UriSource="/theme/default/glass.png" />
+	<BitmapImage x:Key="Img_DelGlass" UriSource="/theme/default/del.png" />
+	<BitmapImage x:Key="Img_Refresh" UriSource="/theme/default/refresh.png" />
+	<BitmapImage x:Key="Img_Back" UriSource="/theme/default/back.png" />
+	<BitmapImage x:Key="Img_Add" UriSource="/theme/default/plus.png" />
+
+</ResourceDictionary>

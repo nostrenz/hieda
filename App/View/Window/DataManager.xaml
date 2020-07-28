@@ -1,0 +1,40 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	xmlns:Element="clr-namespace:Hieda.View.Element" x:Class="Hieda.View.Window.DataManager"
+	loc:Translate.Uid="dataManager" Title="{loc:Translate Data manager}" Height="389" Width="434" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+	<Grid Background="{StaticResource Collection_BackgroundColor}">
+		<TabControl x:Name="Tabs" SelectionChanged="TabControl_SelectionChanged">
+			<TabItem Header="Status">
+				<Grid Background="{StaticResource Window_BackgroundColor}">
+					<ListBox x:Name="listBox_Status" Margin="0,78,0,0" SelectionChanged="ListBox_Status_SelectionChanged"/>
+					<Button x:Name="button_AddStatus" loc:Translate.Uid="add" Content="{loc:Translate Add}" Margin="10,47,281,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,0.95" Click="Button_AddStatus_Click"/>
+					<Button x:Name="button_RemoveStatus" loc:Translate.Uid="remove" Content="{loc:Translate Remove}" Margin="142,47,144,0" VerticalAlignment="Top" Click="Button_RemoveStatus_Click"/>
+					<Button x:Name="button_EditStatus" loc:Translate.Uid="save" Content="{loc:Translate Save}" Margin="279,47,10,0" VerticalAlignment="Top" Click="Button_EditStatus_Click"/>
+					<RadioButton x:Name="Radio_StatusType_Small" loc:Translate.Uid="small" Content="{loc:Translate Small}" Margin="257,15,0,0" VerticalAlignment="Top" IsChecked="True" RenderTransformOrigin="-0.135,0.6" HorizontalAlignment="Left" Width="77"/>
+					<RadioButton x:Name="Radio_StatusType_Big" loc:Translate.Uid="big" Content="{loc:Translate Big}" Margin="339,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.583,0.633" HorizontalAlignment="Left" Width="69"/>
+					<Element:PlaceholderTextBox x:Name="Textbox_Status" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="230" Text="Name" Placeholder="Name" Height="24"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Genres">
+				<Grid Background="{StaticResource Window_BackgroundColor}">
+					<ListBox x:Name="list_Genres" Margin="0,78,0,0" SelectionChanged="ListBox_Genres_SelectionChanged"/>
+					<Element:PlaceholderTextBox x:Name="text_Genre" HorizontalAlignment="Stretch" Margin="10,10,10,0" VerticalAlignment="Top" Width="Auto" Text="Name" Height="24" Placeholder="Name"/>
+					<Button x:Name="button_AddGenre" loc:Translate.Uid="add" Content="{loc:Translate Add}" Margin="10,47,281,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,0.95" Click="Button_AddGenre_Click"/>
+					<Button x:Name="button_RemoveGenre" loc:Translate.Uid="remove" Content="{loc:Translate Remove}" Margin="142,47,144,0" VerticalAlignment="Top" Click="Button_RemoveGenre_Click"/>
+					<Button x:Name="button_EditGenre" loc:Translate.Uid="save" Content="{loc:Translate Save}" Margin="279,47,10,0" VerticalAlignment="Top" Click="Button_EditGenre_Click"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Studios">
+				<Grid Background="{StaticResource Window_BackgroundColor}">
+					<ListBox x:Name="list_Studios" SelectionChanged="ListBox_Studios_SelectionChanged" Margin="0,78,0,0"/>
+					<Element:PlaceholderTextBox x:Name="text_Studio" HorizontalAlignment="Stretch" Margin="10,10,10,0" VerticalAlignment="Top" Width="Auto" Text="Name" Placeholder="Name" Height="24"/>
+					<Button x:Name="button_AddStudio" loc:Translate.Uid="add" Content="{loc:Translate Add}" Margin="10,47,281,0" VerticalAlignment="Top" RenderTransformOrigin="-0.18,0.95" Click="Button_AddStudio_Click"/>
+					<Button x:Name="button_RemoveStudio" loc:Translate.Uid="remove" Content="{loc:Translate Remove}" Margin="142,47,144,0" VerticalAlignment="Top" Click="Button_RemoveStudio_Click"/>
+					<Button x:Name="button_EditStudio" loc:Translate.Uid="save" Content="{loc:Translate Save}" Margin="279,47,10,0" VerticalAlignment="Top" Click="Button_EditStudio_Click"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</Window>

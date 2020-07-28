@@ -1,0 +1,29 @@
+﻿<Window
+	x:Class="Hieda.View.Window.SerieEdit"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	WindowStartupLocation="CenterOwner"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	xmlns:Element="clr-namespace:Hieda.View.Element"
+	Width="606" Height="184" MinWidth="606" MinHeight="184" MaxHeight="184"
+	ResizeMode="CanResize">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<TextBox x:Name="TextBox_Title" HorizontalAlignment="Stretch" Height="26" Margin="90,10,240,0" TextWrapping="NoWrap" loc:Translate.Uid="serieTitle" Text="{loc:Translate Serie title}" VerticalAlignment="Top" Width="Auto" MaxLength="99" VerticalContentAlignment="Center"/>
+		<Element:NumericTextBox x:Name="TextBox_Seasons" HorizontalAlignment="Left" Margin="127,0,0,10" TextWrapping="Wrap" Text="1" Width="21" TextChanged="TextBox_Seasons_TextChanged" TextAlignment="Center" GotFocus="TextBox_Seasons_GotFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="23" VerticalAlignment="Bottom"/>
+		<Label Content="Nombre de saisons:" HorizontalAlignment="Left" Margin="10,0,0,10" Width="117" Height="23" VerticalAlignment="Bottom"/>
+		<ComboBox x:Name="ComboBox_Status" Margin="0,11,10,0" VerticalAlignment="Top" SelectedIndex="0" Height="26" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="167"/>
+		<Label Content="Status" HorizontalAlignment="Right" Margin="0,11,193,0" VerticalAlignment="Top"/>
+		<Separator Margin="190,0,168,10" Height="23" VerticalAlignment="Bottom"/>
+		<Button x:Name="Button_Cancel" loc:Translate.Uid="cancel" Content="{loc:Translate Cancel}" HorizontalAlignment="Right" Margin="0,0,88,10" Width="75" Click="Button_Cancel_Click" Height="24" VerticalAlignment="Bottom" RenderTransformOrigin="0.48,0.037"/>
+		<Button x:Name="Button_Add" loc:Translate.Uid="add" Content="{loc:Translate Add}" ToolTipService.ShowOnDisabled = "True" Margin="0,0,10,10" Click="Button_Add_Click" ToolTip="Entrez au moins le nom de l'anime avant de pouvori ajouter" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="73"/>
+		<TextBox x:Name="TextBox_Cover" loc:Translate.Uid="coverUri" HorizontalAlignment="Stretch" Height="26" Margin="90,41,267,0" TextWrapping="NoWrap" Text="{loc:Translate Cover path or URL...}" VerticalAlignment="Top" Width="Auto" VerticalContentAlignment="Center"/>
+		<Element:BrowseButton x:Name="button_CoverBrowser" Content="..." Margin="0,41,240,0" VerticalAlignment="Top" Width="22" Height="26" HorizontalAlignment="Right"/>
+		<CheckBox x:Name="CheckBox_CoverDelete" loc:Translate.Uid="deleteImage" Content="{loc:Translate Delete image}" HorizontalAlignment="Left" Margin="90,72,0,0" VerticalAlignment="Top" Width="268"/>
+		<Button x:Name="Button_Plus" Content="+" HorizontalAlignment="Left" Margin="169,0,0,10" Width="16" Click="Button_Plus_Click" FontWeight="Bold" Height="23" VerticalAlignment="Bottom"/>
+		<Button x:Name="Button_Minus" Content="-" HorizontalAlignment="Left" Margin="153,0,0,10" Width="16" Click="Button_Minus_Click" FontWeight="Bold" Height="23" VerticalAlignment="Bottom"/>
+		<TextBox x:Name="TextBox_Genres" loc:Translate.Uid="clickToEdit" Text="{loc:Translate Click to edit}" Height="52" Margin="0,42,10,0" TextWrapping="Wrap" VerticalAlignment="Top" IsTabStop="False" AllowDrop="False" Focusable="False" MouseDown="TextBox_Genres_MouseDown" HorizontalAlignment="Right" Width="167" Cursor="Pen"/>
+		<Label Content="Genres" HorizontalAlignment="Right" Margin="0,42,182,0" VerticalAlignment="Top" Width="53" VerticalContentAlignment="Center"/>
+		<Label loc:Translate.Uid="title" Content="{loc:Translate Title}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+		<Label loc:Translate.Uid="cover" Content="{loc:Translate Cover}" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="75"/>
+	</Grid>
+</Window>

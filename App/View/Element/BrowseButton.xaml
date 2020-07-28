@@ -1,0 +1,11 @@
+﻿<Button
+	x:Name="UC_BrowseButton" x:Class="Hieda.View.Element.BrowseButton"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	mc:Ignorable="d"
+	d:DesignWidth="28" d:DesignHeight="23"
+	Width="28"
+	Content="..."
+	Click="BrowseButton_Click"/>

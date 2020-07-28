@@ -1,0 +1,32 @@
+﻿<UserControl
+x:Class="Hieda.View.Element.DateInput"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+xmlns:Element="clr-namespace:Hieda.View.Element"
+mc:Ignorable="d" 
+d:DesignHeight="26" d:DesignWidth="355">
+    <Grid>
+        <ComboBox x:Name="ComboBox_Months" SelectionChanged="ComboBox_Months_SelectionChanged" Margin="63,0,0,0" HorizontalAlignment="Left" Width="47">
+			<ComboBoxItem loc:Translate.Uid="january" Content="{loc:Translate January}"/>
+			<ComboBoxItem loc:Translate.Uid="february" Content="{loc:Translate February}"/>
+			<ComboBoxItem loc:Translate.Uid="march" Content="{loc:Translate March}"/>
+			<ComboBoxItem loc:Translate.Uid="april" Content="{loc:Translate April}"/>
+			<ComboBoxItem loc:Translate.Uid="may" Content="{loc:Translate May}"/>
+			<ComboBoxItem loc:Translate.Uid="june" Content="{loc:Translate June}"/>
+			<ComboBoxItem loc:Translate.Uid="july" Content="{loc:Translate July}"/>
+			<ComboBoxItem loc:Translate.Uid="august" Content="{loc:Translate August}"/>
+			<ComboBoxItem loc:Translate.Uid="september" Content="{loc:Translate September}"/>
+			<ComboBoxItem loc:Translate.Uid="october" Content="{loc:Translate October}"/>
+			<ComboBoxItem loc:Translate.Uid="november" Content="{loc:Translate November}"/>
+			<ComboBoxItem loc:Translate.Uid="december" Content="{loc:Translate December}"/>
+        </ComboBox>
+		<Element:NumericTextBox x:Name="TextBox_Day" Maximum="31" AllowEmpty="True" IsTabStop="True" TabIndex="2" Digits="2" Pad="True" Margin="115,0,0,0" HorizontalAlignment="Left" Width="32"/>
+		<Element:NumericTextBox x:Name="TextBox_Month" Maximum="12" AllowEmpty="True" IsTabStop="True" TabIndex="1" Digits="2" Pad="True" TextChanged="TextBox_Month_TextChanged" Margin="63,0,0,0" HorizontalAlignment="Left" Width="32"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Width="29" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="152,0,0,0"/>
+        <Element:NumericTextBox x:Name="TextBox_Year" AllowEmpty="True" IsTabStop="True" TabIndex="0" Maximum="9999" Digits="4" Pad="True" HorizontalAlignment="Left" Width="58"/>
+		<ComboBox x:Name="ComboBox_Seasons" Height="26" VerticalAlignment="Top" Margin="186,0,0,0"/>
+    </Grid>
+</UserControl>

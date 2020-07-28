@@ -1,0 +1,48 @@
+﻿<local:Item
+	x:Class="Hieda.View.Element.List.Row"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:Hieda.View.Element.List"
+	mc:Ignorable="d"
+	MouseDoubleClick="Row_DoubleClick" DragEnter="row_DragEnter" Drop="Row_Drop">
+	<Grid x:Name="Grid_Root" Height="296">
+		<Border x:Name="Border_CoverBorder" BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Width="205">
+			<Grid x:Name="Grid_CoverContainer" IsHitTestVisible="True">
+				<Image x:Name="Image_Cover" Source="pack://application:,,,/res/no.jpg" Stretch="Fill" MouseDown="cover_MouseDown" GotFocus="cover_GotFocus" LostFocus="cover_LostFocus" MouseLeave="cover_MouseLeave" MouseEnter="cover_MouseEnter" ContextMenuOpening="cover_ContextMenuOpening" RenderOptions.BitmapScalingMode="LowQuality"/>
+				<Grid x:Name="Grid_CoverOverlay" IsHitTestVisible="False">
+					<Label x:Name="Label_Number" Content="02" Margin="0,0,2,0" HorizontalContentAlignment="Right" Foreground="#CC91EE91" FontSize="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="67" VerticalContentAlignment="Center"/>
+					<Label x:Name="Label_Status_Small" VerticalAlignment="Bottom" FontSize="30" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="63" Background="#B2000000"/>
+					<Label x:Name="Label_SeasonsCounter" Foreground="White" Content="2 saisons" Height="23" Width="60" Margin="0,0,0,-3" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+					<Label x:Name="Label_EpisodesCounter" Foreground="White" Content="34 episodes" Height="23" Width="67" Margin="0,0,2,-3" FontSize="10" HorizontalContentAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+					<Label x:Name="Label_Status_Big" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontSize="102" RenderTransformOrigin="0.5,0.5" IsHitTestVisible="False">
+						<Label.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform Angle="10"/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Label.RenderTransform>
+					</Label>
+					<Label x:Name="Label_EpisodesValues" Opacity="0" Content="0/0/0" Foreground="#CC91EE91" FontSize="40" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Background="#7F000000"/>
+					<Label x:Name="Label_EpisodesValuesDescr" Opacity="0" Content="Watched/Owned/Total" Foreground="#CC91EE91" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsHitTestVisible="False" Margin="0,0,0,60"/>
+					<Image x:Name="Image_EpisodePlay" HorizontalAlignment="Center" Source="pack://siteoforigin:,,,/res/play-big.png" Opacity="0.75" Width="128" RenderOptions.BitmapScalingMode="LowQuality">
+						<Image.Effect>
+							<DropShadowEffect Opacity="0.85" Direction="1" ShadowDepth="1" BlurRadius="7"/>
+						</Image.Effect>
+					</Image>
+					<Image x:Name="Button_Continue" HorizontalAlignment="Center" Margin="9,10,158,248" Source="pack://siteoforigin:,,,/res/play-small.png" Opacity="0" Width="32" MouseDown="button_Continue_MouseDown" MouseEnter="button_Continue_MouseEnter" RenderOptions.BitmapScalingMode="LowQuality">
+						<Image.Effect>
+							<DropShadowEffect Opacity="0.85" Direction="1" ShadowDepth="1" BlurRadius="7"/>
+						</Image.Effect>
+					</Image>
+					<Image x:Name="Image_NoLinkedFile" Opacity="0" Margin="9,10,0,0" Source="pack://siteoforigin:,,,/res/no-linked-file.png" RenderOptions.BitmapScalingMode="LowQuality" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="32"/>
+					<Label x:Name="Label_Type"  HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="18" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="70" Height="32" Background="#B2000000" IsHitTestVisible="False" />
+				</Grid>
+			</Grid>
+		</Border>
+		<Label x:Name="Label_Title" Content="Label" Margin="271,126,10,126" FontSize="25" VerticalContentAlignment="Center"/>
+	</Grid>
+</local:Item>

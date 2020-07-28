@@ -1,0 +1,45 @@
+﻿<Window
+	x:Name="Episode_Import" x:Class="Hieda.View.Window.EpisodeImport"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:loc="http://schemas.tomer.com/winfx/2006/xaml/presentation"
+	xmlns:Element="clr-namespace:Hieda.View.Element"
+	WindowStartupLocation="CenterOwner"
+	loc:Translate.Uid="importEpisodes"
+	Title="{loc:Translate Import episodes}"
+	Width="591" Height="312"
+	MinWidth="591"
+	ResizeMode="CanResize">
+	<Grid Background="{StaticResource Window_BackgroundColor}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="255*"/>
+			<RowDefinition Height="26*"/>
+		</Grid.RowDefinitions>
+		<Button x:Name="button_Import" loc:Translate.Uid="import" Content="{loc:Translate Import}" ToolTipService.ShowOnDisabled = "True" Margin="0,0,10,10" Click="button_Import_Click" HorizontalAlignment="Right" Width="75" Height="20" VerticalAlignment="Bottom" Grid.RowSpan="2"/>
+		<Button x:Name="button_Cancel" loc:Translate.Uid="cancel" Content="{loc:Translate Cancel}" Margin="10,0,0,10" IsCancel="True" Click="button_Cancel_Click" Height="20" VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Left" Width="75"/>
+		<ListBox x:Name="listbow_FilesList" MouseDoubleClick="FilesList_MouseDoubleClick" Margin="0,0,0,126">
+			<ListBox.ItemContainerStyle>
+				<Style TargetType="ListBoxItem">
+					<Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+				</Style>
+			</ListBox.ItemContainerStyle>
+		</ListBox>
+		<TextBox x:Name="textbox_Pattern" Margin="10,0,135,70" TextWrapping="NoWrap" Height="23" VerticalAlignment="Bottom">
+			<TextBox.ContextMenu>
+				<ContextMenu>
+					<MenuItem x:Name="menuitem_Test" Header="Define selection as">
+						<MenuItem x:Name="menuitem_Title" Header="Title" Click="menuitem_Title_Click"/>
+						<MenuItem x:Name="menuitem_Number" Header="Number" Click="menuitem_Number_Click"/>
+					</MenuItem>
+				</ContextMenu>
+			</TextBox.ContextMenu>
+		</TextBox>
+		<Button x:Name="button_Apply" loc:Translate.Uid="apply" Content="{loc:Translate Apply}" Margin="0,0,20,70" Click="button_Apply_Click" HorizontalAlignment="Right" Width="62" Height="23" VerticalAlignment="Bottom"/>
+		<Button x:Name="button_Test" loc:Translate.Uid="test" Content="{loc:Translate Test}" Margin="0,0,87,70" Click="button_Test_Click" HorizontalAlignment="Right" Width="43" Height="23" VerticalAlignment="Bottom"/>
+		<Button loc:Translate.Uid="apply" Content="{loc:Translate Apply}" Margin="0,0,20,40" Click="Button_ApplyOrder_Click" HorizontalAlignment="Right" Width="62" Height="23" VerticalAlignment="Bottom" />
+		<Label loc:Translate.Uid="naturalOrder" Content="{loc:Translate Set numbers in the list order from}" HorizontalAlignment="Left" Margin="10,0,0,40" Width="438" Height="23" VerticalAlignment="Bottom"/>
+		<TextBox x:Name="textbox_orderFrom" Margin="0,0,87,40" TextWrapping="Wrap" Text="1" HorizontalAlignment="Right" Width="43" Height="23" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+		<CheckBox loc:Translate.Uid="markAllWatched" Content="{loc:Translate Mark all as watched}" Margin="0,0,8,106" Click="CheckBox_MarkAllAsWatched_Click" HorizontalAlignment="Right" Width="125" Height="15" VerticalAlignment="Bottom"/>
+		<CheckBox x:Name="CheckBox_Replace" loc:Translate.Uid="replaceEpisodes" Content="{loc:Translate Replace episodes with the same number}" HorizontalAlignment="Left" Margin="10,0,0,106" Height="15" VerticalAlignment="Bottom"/>
+	</Grid>
+</Window>

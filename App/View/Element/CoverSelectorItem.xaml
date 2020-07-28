@@ -1,0 +1,15 @@
+﻿<UserControl
+	x:Name="UC_CoverSelectorItem" x:Class="Hieda.View.Element.CoverSelectorItem"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	mc:Ignorable="d"
+	HorizontalAlignment="Left"
+	d:DesignWidth="80" d:DesignHeight="110">
+	<Grid>
+		<Border x:Name="border_Cover" BorderBrush="Black" BorderThickness="2" Width="80" Height="110">
+			<Image x:Name="image_Cover" HorizontalAlignment="Left" Height="110" VerticalAlignment="Top" Width="80" LostFocus="Image_Cover_LostFocus" GotFocus="Image_Cover_GotFocus" MouseDown="Image_Cover_MouseDown" Stretch="Fill" Source="pack://application:,,,/res/no.jpg" RenderOptions.BitmapScalingMode="LowQuality"/>
+		</Border>
+	</Grid>
+</UserControl>
